@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programme Handball</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: #f3f4f6;
+    }
+    h1, h2, h3 {
+      color: #1f2937;
+    }
+    .day {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .exercise {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+    }
+    .exercise input {
+      margin-right: 0.5rem;
+    }
+    .routine {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+    .nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 1rem;
+      z-index: 999;
+    }
+    .nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #2563eb;
+    }
+    section {
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').then(() => {
+          console.log('Service Worker Registered');
+        });
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="nav">
+    <a href="#sem1">Semaine 1</a>
+    <a href="#sem2">Semaine 2</a>
+    <a href="#sem3">Semaine 3</a>
+    <a href="#sem4">Semaine 4</a>
+    <a href="#routines">Routines</a>
+    <a href="#exercices">Exercices</a>
+  </div>
+
+  <h1>Programme Handball – 4 Semaines</h1>
+
+  <section id="sem1">
+    <h2>Semaine 1</h2>
+    <div class="day">
+      <h3>Lundi – Bas du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Squat saut – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Step up – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Pont fessier – 3 x 12</div>
+      <div class="exercise"><input type="checkbox"> Gainage – 3 x 30 sec</div>
+      <div class="exercise"><input type="checkbox"> Sprint – 6 x 20m / 4 x 30m</div>
+    </div>
+    <div class="day">
+      <h3>Mardi – Haut du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Pompes – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Rowing elastique – 3 x 12</div>
+      <div class="exercise"><input type="checkbox"> Curl biceps – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Extensions triceps – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Course fractionnée – 30/30 x 6</div>
+    </div>
+    <div class="day">
+      <h3>Mercredi – Core dynamique</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Planche – 3 x 30s</div>
+      <div class="exercise"><input type="checkbox"> Crunch rotation – 3 x 20</div>
+      <div class="exercise"><input type="checkbox"> Superman – 3 x 20s</div>
+      <div class="exercise"><input type="checkbox"> Changement d'appui – 5x 20sec</div>
+      <div class="exercise"><input type="checkbox"> Pas chassé explosif – 4 x 20m</div>
+    </div>
+    <div class="day">
+      <h3>Jeudi – Full body</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Burpees modifiés – 3 x 8</div>
+      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
+      <div class="exercise"><input type="checkbox"> Squat sumo isométrique – 3 x 10 / jambe</div>
+      <div class="exercise"><input type="checkbox"> Planche – 3 x 30sec</div>
+      <div class="exercise"><input type="checkbox"> Gainage bras tendu – 2 x 45 sec</div>
+    </div>
+    <div class="day">
+      <h3>Vendredi – Endurance spé</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> 4 x 3 min course a intensité moyenne (80 %)</div>
+      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30sec / coté</div>
+      <div class="exercise"><input type="checkbox"> Pompes – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Step rapide – 4 x 20sec / coté</div>
+    </div>
+  </section>
+
+  <section id="sem2">
+    <h2>Semaine 2</h2>
+    <div class="day">
+      <h3>Lundi – Bas du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Squat saut – 3 x 12</div>
+      <div class="exercise"><input type="checkbox"> Step up – 3 x 12</div>
+      <div class="exercise"><input type="checkbox"> Pont fessier – 3 x 14</div>
+      <div class="exercise"><input type="checkbox"> Gainage – 3 x 30 sec</div>
+      <div class="exercise"><input type="checkbox"> Sprint – 6 x 20m / 6 x 30m</div>
+    </div>
+    <div class="day">
+      <h3>Mardi – Haut du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Pompes – 3 x 12</div>
+      <div class="exercise"><input type="checkbox"> Rowing elastique – 3 x 14</div>
+      <div class="exercise"><input type="checkbox"> Curl biceps – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Extensions triceps – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Course fractionnée – 30/30 x 6</div>
+    </div>
+    <div class="day">
+      <h3>Mercredi – Core dynamique</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Planche – 3 x 30s</div>
+      <div class="exercise"><input type="checkbox"> Crunch rotation – 3 x 20</div>
+      <div class="exercise"><input type="checkbox"> Superman – 3 x 20s</div>
+      <div class="exercise"><input type="checkbox"> Changement d'appui – 5x 20sec</div>
+      <div class="exercise"><input type="checkbox"> Pas chassé explosif – 4 x 20m</div>
+    </div>
+    <div class="day">
+      <h3>Jeudi – Full body</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> Burpees modifiés – 3 x 8</div>
+      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
+      <div class="exercise"><input type="checkbox"> Squat sumo isométrique – 3 x 10 / jambe</div>
+      <div class="exercise"><input type="checkbox"> Planche – 3 x 30sec</div>
+      <div class="exercise"><input type="checkbox"> Gainage bras tendu – 2 x 45 sec</div>
+    </div>
+    <div class="day">
+      <h3>Vendredi – Endurance spé</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise"><input type="checkbox"> 4 x 3 min course a intensité moyenne (80 %)</div>
+      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30sec / coté</div>
+      <div class="exercise"><input type="checkbox"> Pompes – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Step rapide – 4 x 20sec / coté</div>
+    </div>
+  </section>
+
+  <section id="sem2">
+    <h2>Semaine 2</h2>
+    <div class="day">
+      <h3>Lundi – Renfo bas</h3>
+      <div class="exercise"><input type="checkbox"> Step-up sur marche – 4 x 10</div>
+      <div class="exercise"><input type="checkbox"> Pont unilatéral – 3 x 10 / jambe</div>
+      <div class="exercise"><input type="checkbox"> Squat sumo – 3 x 12</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Mardi – Haut explosif</h3>
+      <div class="exercise"><input type="checkbox"> Pompes pliométriques (ou classiques) – 4 x 8</div>
+      <div class="exercise"><input type="checkbox"> Rowing rapide – 3 x 15</div>
+      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Mercredi – Mobilité & gainage</h3>
+      <div class="exercise"><input type="checkbox"> Étirements dynamiques – 10 min</div>
+      <div class="exercise"><input type="checkbox"> Planche – 3 x 45 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Jeudi – Bas + cardio</h3>
+      <div class="exercise"><input type="checkbox"> Squat dynamique – 4 x 12</div>
+      <div class="exercise"><input type="checkbox"> Course 5 x 45/15</div>
+      <div class="exercise"><input type="checkbox"> Gainage latéral – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Vendredi – Full body léger</h3>
+      <div class="exercise"><input type="checkbox"> Shadow boxing – 4 x 30 sec</div>
+      <div class="exercise"><input type="checkbox"> Pompes inclinées – 3 x 10</div>
+      <div class="exercise"><input type="checkbox"> Crunch + gainage – 3 x 20</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+  </section>
+
+  <section id="sem3">
+    <h2>Semaine 3</h2>
+    <div class="day">
+      <h3>Lundi – Force + réactivité</h3>
+      <div class="exercise"><input type="checkbox"> Shadow boxing + élastique – 4 x 30 sec</div>
+      <div class="exercise"><input type="checkbox"> Pompes + saut (ou sans) – 4 x 10</div>
+      <div class="exercise"><input type="checkbox"> Planche dynamique – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Mardi – Bas explosif</h3>
+      <div class="exercise"><input type="checkbox"> Step-up rapide – 4 x 10 / jambe</div>
+      <div class="exercise"><input type="checkbox"> Squat saut (si toléré) – 3 x 8</div>
+      <div class="exercise"><input type="checkbox"> Gainage + crunch – 3 x 20</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Mercredi – Mobilité active</h3>
+      <div class="exercise"><input type="checkbox"> Marche rapide ou footing léger – 20 min</div>
+      <div class="exercise"><input type="checkbox"> Étirements actifs – 10 min</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Jeudi – Core + haut</h3>
+      <div class="exercise"><input type="checkbox"> Pompes inclinées – 4 x 12</div>
+      <div class="exercise"><input type="checkbox"> Crunch + rotation – 3 x 20</div>
+      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Vendredi – Fractionné long</h3>
+      <div class="exercise"><input type="checkbox"> Course fractionnée 6 x 1 min/30 sec</div>
+      <div class="exercise"><input type="checkbox"> Squat sumo – 3 x 15</div>
+      <div class="exercise"><input type="checkbox"> Planche dynamique – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+  </section>
+
+  <section id="sem4">
+    <h2>Semaine 4</h2>
+    <div class="day">
+      <h3>Lundi – Endurance & Core</h3>
+      <div class="exercise"><input type="checkbox"> Course fractionnée 6 x 45/15</div>
+      <div class="exercise"><input type="checkbox"> Crunch rotation – 3 x 20</div>
+      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Mardi – Renfo haut</h3>
+      <div class="exercise"><input type="checkbox"> Pompes – 4 x 10</div>
+      <div class="exercise"><input type="checkbox"> Rowing élastique – 3 x 15</div>
+      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Mercredi – Actif léger</h3>
+      <div class="exercise"><input type="checkbox"> Marche ou footing 20 min</div>
+      <div class="exercise"><input type="checkbox"> Planche – 3 x 45 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Jeudi – Full body</h3>
+      <div class="exercise"><input type="checkbox"> Pompes + Squat – 4 x 12</div>
+      <div class="exercise"><input type="checkbox"> Crunch + gainage – 3 x 20</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+    <div class="day">
+      <h3>Vendredi – Cardio test</h3>
+      <div class="exercise"><input type="checkbox"> Course 7 x 1min/30s</div>
+      <div class="exercise"><input type="checkbox"> Squat sumo – 3 x 15</div>
+      <div class="exercise"><input type="checkbox"> Planche dynamique – 3 x 30 sec</div>
+      <p class="routine">+ Routine genou & periostite</p>
+    </div>
+  </section>
+
+  <section id="routines">
+    <h2>Routines genou & périostite (quotidien)</h2>
+    <ul>
+      <li>Marche sur talons / pointes – 1 min chaque</li>
+      <li>Elastique pied – 3 x 12 chaque</li>
+      <li>Haut bas sur marche – 3 x 20 chaque</li>
+      <li>Étirements mollets/tibia – 2 x 30 sec</li>
+
+      <li>Pont fessier unilat – 3 x 30</li>
+      <li>Clamshell avec élastique – 3 x 12 / côté</li>
+      <li>Chaise murale – 3 x 30 sec</li>
+      <li>Équilibre 1 jambe yeux fermés – 3 x 20 sec</li>
+    </ul>
+  </section>
+
+  <section id="exercices">
+    <h2>Explication des Exercices</h2>
+    <ul>
+      <li><strong>Step-up :</strong> monter sur une marche, travail fessiers/cuisses</li>
+      <li><strong>Squat sumo :</strong> pieds larges, genoux vers ext., adducteurs + cuisses</li>
+      <li><strong>Planche dynamique :</strong> en planche, lever bras ou jambes</li>
+      <li><strong>Shadow boxing :</strong> coups de poing rapides avec élastique</li>
+      <li><strong>Clamshell :</strong> allongé côté, ouvrir genoux avec élastique</li>
+      <li><strong>Pont unilatéral :</strong> allongé, pousser avec une jambe, l'autre tendue</li>
+      <li><strong>Crunch rotation :</strong> relever buste et tourner vers genou opposé</li>
+      <li><strong>Pompes pliométriques :</strong> pompes avec mini saut mains ou rapides</li>
+    </ul>
+  </section>
+</body>
+</html>
