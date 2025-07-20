@@ -83,6 +83,49 @@
       margin-top: 8px;
       border-radius: 4px;
     }
+
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 30px;
+      border: 1px solid #888;
+      width: 300px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #timer {
+      font-size: 2em;
+      margin: 20px 0;
+    }
   </style>
   <script>
     if ('serviceWorker' in navigator) {
@@ -105,11 +148,10 @@
   </div>
 
   <h1>Programme Handball – 4 Semaines</h1>
-
+  <button onclick="openModal()" style="position: fixed; top: 15px; right: 15px; z-index: 10000; border-radius: 50%; font-weight: 800;">⏱</button>
   <!-- SEMAINE 1 -->
   <section id="sem1">
     <h2>Semaine 1</h2>
-
     <div class="day">
       <h3>Lundi – Bas du corps</h3>
       <p class="routine">Routine genou & periostite</p>
@@ -1083,12 +1125,18 @@
   </section>
 
 
-  <div id="chronoPanel" style="display:none; margin-top:2rem; padding:1rem; background:#fff; border-radius:1rem; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-    <h2>Chronomètre</h2>
-    <div style="font-size:2rem; margin-bottom:1rem;" id="chronoDisplay">00:00</div>
-    <button onclick="startChrono()">Démarrer</button>
-    <button onclick="stopChrono()">Pause</button>
-    <button onclick="resetChrono()">Réinitialiser</button>
+  <!-- La popup -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Chronomètre</h2>
+      <div id="timer">00:00</div>
+      <div style="display: flex; justify-content: center;">
+        <button onclick="startChrono()" style="color: green; background-color: #0080007a; border: none; font-size: 30px;">►</button>
+        <button onclick="stopChrono()" style="color: blue; background-color: #0000ff61; border: none; font-size: 30px;">⏸</button>
+        <button onclick="resetChrono()" style="color: red; background-color: #ff00005e; border: none; font-size: 30px;">↻</button>
+      </div>
+    </div>
   </div>
 
 
@@ -1121,69 +1169,126 @@
     </ul>
   </section>
 
-
   <script>
-    let chronoInterval;
+    let timerInterval;
     let seconds = 0;
+    let isRunning = false;
 
-    function toggleChrono() {
-      const panel = document.getElementById('chronoPanel');
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function updateChronoDisplay() {
+    function updateDisplay() {
       const min = String(Math.floor(seconds / 60)).padStart(2, '0');
       const sec = String(seconds % 60).padStart(2, '0');
-      document.getElementById('chronoDisplay').textContent = `${min}:${sec}`;
+      document.getElementById("timer").textContent = `${min}:${sec}`;
     }
 
     function startChrono() {
-      if (!chronoInterval) {
-        chronoInterval = setInterval(() => {
-          seconds++;
-          updateChronoDisplay();
-        }, 1000);
-      }
+      if (isRunning) return;
+      isRunning = true;
+      timerInterval = setInterval(() => {
+        seconds++;
+        updateDisplay();
+      }, 1000);
     }
 
     function stopChrono() {
-      clearInterval(chronoInterval);
-      chronoInterval = null;
+      clearInterval(timerInterval);
+      isRunning = false;
     }
 
     function resetChrono() {
       stopChrono();
       seconds = 0;
-      updateChronoDisplay();
+      updateDisplay();
     }
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').then(reg => {
-        console.log('✅ Service worker enregistré avec succès');
-
-        reg.onupdatefound = () => {
-          console.log('📦 Mise à jour détectée du service worker...');
-          const newWorker = reg.installing;
-          newWorker.onstatechange = () => {
-            console.log('🔁 État du nouveau SW :', newWorker.state);
-            if (newWorker.state === 'installed') {
-              if (navigator.serviceWorker.controller) {
-                const update = confirm("Une mise à jour est disponible. Recharger ?");
-                if (update) {
-                  window.location.reload();
-                }
-              } else {
-                console.log('✅ SW installé pour la première fois');
-              }
-            }
-          };
-        };
-      }).catch(err => {
-        console.error('❌ Erreur d’enregistrement du service worker :', err);
-      });
-    } else {
-      console.warn('⚠️ Service worker non supporté sur ce navigateur');
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+      resetChrono();
     }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+      stopChrono();
+    }
+
+    // Ferme la popup si on clique en dehors
+    window.onclick = function(event) {
+      const modal = document.getElementById("myModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
   </script>
+
+  <!--
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let chronoInterval;
+      let seconds = 0;
+
+      function toggleChrono() {
+        const panel = document.getElementById('chronoPanel');
+        panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+      }
+
+      function updateChronoDisplay() {
+        const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+        const sec = String(seconds % 60).padStart(2, '0');
+        document.getElementById('chronoDisplay').textContent = `${min}:${sec}`;
+      }
+
+      function startChrono() {
+        if (!chronoInterval) {
+          chronoInterval = setInterval(() => {
+            seconds++;
+            updateChronoDisplay();
+          }, 1000);
+        }
+      }
+
+      function stopChrono() {
+        clearInterval(chronoInterval);
+        chronoInterval = null;
+      }
+
+      function resetChrono() {
+        stopChrono();
+        seconds = 0;
+        updateChronoDisplay();
+      }
+
+      // Exposer les fonctions dans le scope global
+      window.toggleChrono = toggleChrono;
+      window.startChrono = startChrono;
+      window.stopChrono = stopChrono;
+      window.resetChrono = resetChrono;
+
+      // Service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js').then(reg => {
+          console.log('✅ Service worker enregistré avec succès');
+
+          reg.onupdatefound = () => {
+            console.log('📦 Mise à jour détectée du service worker...');
+            const newWorker = reg.installing;
+            newWorker.onstatechange = () => {
+              if (newWorker.state === 'installed') {
+                if (navigator.serviceWorker.controller) {
+                  const update = confirm("Une mise à jour est disponible. Recharger ?");
+                  if (update) {
+                    window.location.reload();
+                  }
+                } else {
+                  console.log('✅ SW installé pour la première fois');
+                }
+              }
+            };
+          };
+        }).catch(err => {
+          console.error('❌ Erreur SW :', err);
+        });
+      }
+    });
+  </script>
+  -->
 </body>
 </html>
