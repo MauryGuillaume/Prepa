@@ -50,6 +50,39 @@
     section {
       margin-top: 2rem;
     }
+
+    .tooltip-trigger {
+      cursor: help;
+      font-weight: bold;
+      color: #0066cc;
+      position: relative;
+      padding: 0 6px;
+    }
+
+    .tooltip-trigger .tooltip-content {
+      display: none;
+      position: absolute;
+      width: 220px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 10;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 4px;
+    }
+
+    .tooltip-trigger:hover .tooltip-content {
+      display: block;
+    }
+
+    .tooltip-content img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 8px;
+      border-radius: 4px;
+    }
   </style>
   <script>
     if ('serviceWorker' in navigator) {
@@ -73,6 +106,7 @@
 
   <h1>Programme Handball – 4 Semaines</h1>
 
+  <!-- SEMAINE 1 -->
   <section id="sem1">
     <h2>Semaine 1</h2>
     <div class="day">
@@ -121,166 +155,744 @@
     </div>
   </section>
 
+  <!-- SEMAINE 2 -->
   <section id="sem2">
     <h2>Semaine 2</h2>
+
     <div class="day">
       <h3>Lundi – Bas du corps</h3>
       <p class="routine">Routine genou & periostite</p>
-      <div class="exercise"><input type="checkbox"> Squat saut – 3 x 12</div>
-      <div class="exercise"><input type="checkbox"> Step up – 3 x 12</div>
-      <div class="exercise"><input type="checkbox"> Pont fessier – 3 x 14</div>
-      <div class="exercise"><input type="checkbox"> Gainage – 3 x 30 sec</div>
-      <div class="exercise"><input type="checkbox"> Sprint – 6 x 20m / 6 x 30m</div>
+      <div class="exercise">
+        <input type="checkbox"> Squat saut – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Exercice explosif pour les jambes, saut après squat.
+            <img src="images/squat_saut.jpg" alt="Squat saut">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Step up – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Monter sur une marche, travail fessiers et cuisses.
+            <img src="images/step_up.jpg" alt="Step up">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pont fessier – 4 x 15
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des fessiers et lombaires.
+            <img src="images/pont_fessier.jpg" alt="Pont fessier">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage – 4 x 40 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement de la sangle abdominale.
+            <img src="images/gainage.jpg" alt="Gainage">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Sprint – 7 x 25m / 5 x 30m
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail explosif et cardio par sprints courts.
+            <img src="images/sprint.jpg" alt="Sprint">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
       <h3>Mardi – Haut du corps</h3>
       <p class="routine">Routine genou & periostite</p>
-      <div class="exercise"><input type="checkbox"> Pompes – 3 x 12</div>
-      <div class="exercise"><input type="checkbox"> Rowing elastique – 3 x 14</div>
-      <div class="exercise"><input type="checkbox"> Curl biceps – 3 x 10</div>
-      <div class="exercise"><input type="checkbox"> Extensions triceps – 3 x 10</div>
-      <div class="exercise"><input type="checkbox"> Course fractionnée – 30/30 x 6</div>
+      <div class="exercise">
+        <input type="checkbox"> Pompes – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des pectoraux, triceps et épaules.
+            <img src="images/pompes.jpg" alt="Pompes">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Rowing elastique – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail du dos avec élastique.
+            <img src="images/rowing_elastique.jpg" alt="Rowing elastique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Curl biceps – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des biceps avec élastique.
+            <img src="images/curl_biceps.jpg" alt="Curl biceps">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Extensions triceps – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail des triceps avec élastique.
+            <img src="images/extensions_triceps.jpg" alt="Extensions triceps">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Course fractionnée – 30/30 x 7
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Course en intervalles de 30 sec effort / 30 sec repos.
+            <img src="images/course_fractionnee.jpg" alt="Course fractionnée">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
       <h3>Mercredi – Core dynamique</h3>
       <p class="routine">Routine genou & periostite</p>
-      <div class="exercise"><input type="checkbox"> Planche – 3 x 30s</div>
-      <div class="exercise"><input type="checkbox"> Crunch rotation – 3 x 20</div>
-      <div class="exercise"><input type="checkbox"> Superman – 3 x 20s</div>
-      <div class="exercise"><input type="checkbox"> Changement d'appui – 5x 20sec</div>
-      <div class="exercise"><input type="checkbox"> Pas chassé explosif – 4 x 20m</div>
+      <div class="exercise">
+        <input type="checkbox"> Planche – 4 x 40s
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement abdominal profond.
+            <img src="images/planche.jpg" alt="Planche">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Crunch rotation – 4 x 25
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des obliques avec rotation.
+            <img src="images/crunch_rotation.jpg" alt="Crunch rotation">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Superman – 4 x 25s
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement du dos et lombaires.
+            <img src="images/superman.jpg" alt="Superman">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Changement d'appui – 6 x 20s
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail d’équilibre et gainage dynamique.
+            <img src="images/changement_appui.jpg" alt="Changement d'appui">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pas chassé explosif – 5 x 20m
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail de déplacement latéral rapide.
+            <img src="images/pas_chasse_explosif.jpg" alt="Pas chassé explosif">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
       <h3>Jeudi – Full body</h3>
       <p class="routine">Routine genou & periostite</p>
-      <div class="exercise"><input type="checkbox"> Burpees modifiés – 3 x 8</div>
-      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
-      <div class="exercise"><input type="checkbox"> Squat sumo isométrique – 3 x 10 / jambe</div>
-      <div class="exercise"><input type="checkbox"> Planche – 3 x 30sec</div>
-      <div class="exercise"><input type="checkbox"> Gainage bras tendu – 2 x 45 sec</div>
+      <div class="exercise">
+        <input type="checkbox"> Burpees modifiés – 4 x 10
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Exercice complet à intensité modérée.
+            <img src="images/burpees.jpg" alt="Burpees modifiés">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Shadow boxing – 4 x 35 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail cardio et coordination avec élastique.
+            <img src="images/shadow_boxing.jpg" alt="Shadow boxing">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Squat sumo isométrique – 4 x 12 / jambe
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des adducteurs en isométrie.
+            <img src="images/squat_sumo_isometrie.jpg" alt="Squat sumo isométrique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Planche – 4 x 40sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement abdominal.
+            <img src="images/planche.jpg" alt="Planche">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage bras tendu – 3 x 50 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Gainage avec bras tendus pour intensifier.
+            <img src="images/gainage_bras_tendu.jpg" alt="Gainage bras tendu">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
       <h3>Vendredi – Endurance spé</h3>
       <p class="routine">Routine genou & periostite</p>
-      <div class="exercise"><input type="checkbox"> 4 x 3 min course a intensité moyenne (80 %)</div>
-      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30sec / coté</div>
-      <div class="exercise"><input type="checkbox"> Pompes – 3 x 10</div>
-      <div class="exercise"><input type="checkbox"> Step rapide – 4 x 20sec / coté</div>
+      <div class="exercise">
+        <input type="checkbox"> 5 x 3 min course à intensité moyenne (80 %)
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail cardio endurance à 80% FC max.
+            <img src="images/course_endurance.jpg" alt="Course endurance">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage oblique – 4 x 40 sec / côté
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des obliques.
+            <img src="images/gainage_oblique.jpg" alt="Gainage oblique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pompes – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement haut du corps.
+            <img src="images/pompes.jpg" alt="Pompes">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Step rapide – 5 x 20 sec / côté
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail rapide de jambes.
+            <img src="images/step_rapide.jpg" alt="Step rapide">
+          </div>
+        </span>
+      </div>
     </div>
   </section>
 
-  <section id="sem2">
-    <h2>Semaine 2</h2>
-    <div class="day">
-      <h3>Lundi – Renfo bas</h3>
-      <div class="exercise"><input type="checkbox"> Step-up sur marche – 4 x 10</div>
-      <div class="exercise"><input type="checkbox"> Pont unilatéral – 3 x 10 / jambe</div>
-      <div class="exercise"><input type="checkbox"> Squat sumo – 3 x 12</div>
-      <p class="routine">+ Routine genou & periostite</p>
-    </div>
-    <div class="day">
-      <h3>Mardi – Haut explosif</h3>
-      <div class="exercise"><input type="checkbox"> Pompes pliométriques (ou classiques) – 4 x 8</div>
-      <div class="exercise"><input type="checkbox"> Rowing rapide – 3 x 15</div>
-      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
-    </div>
-    <div class="day">
-      <h3>Mercredi – Mobilité & gainage</h3>
-      <div class="exercise"><input type="checkbox"> Étirements dynamiques – 10 min</div>
-      <div class="exercise"><input type="checkbox"> Planche – 3 x 45 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
-    </div>
-    <div class="day">
-      <h3>Jeudi – Bas + cardio</h3>
-      <div class="exercise"><input type="checkbox"> Squat dynamique – 4 x 12</div>
-      <div class="exercise"><input type="checkbox"> Course 5 x 45/15</div>
-      <div class="exercise"><input type="checkbox"> Gainage latéral – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
-    </div>
-    <div class="day">
-      <h3>Vendredi – Full body léger</h3>
-      <div class="exercise"><input type="checkbox"> Shadow boxing – 4 x 30 sec</div>
-      <div class="exercise"><input type="checkbox"> Pompes inclinées – 3 x 10</div>
-      <div class="exercise"><input type="checkbox"> Crunch + gainage – 3 x 20</div>
-      <p class="routine">+ Routine genou & periostite</p>
-    </div>
-  </section>
-
+  <!-- SEMAINE 3 -->
   <section id="sem3">
     <h2>Semaine 3</h2>
+
     <div class="day">
-      <h3>Lundi – Force + réactivité</h3>
-      <div class="exercise"><input type="checkbox"> Shadow boxing + élastique – 4 x 30 sec</div>
-      <div class="exercise"><input type="checkbox"> Pompes + saut (ou sans) – 4 x 10</div>
-      <div class="exercise"><input type="checkbox"> Planche dynamique – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Lundi – Bas du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Squat saut – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Exercice explosif pour les jambes, saut après squat.
+            <img src="images/squat_saut.jpg" alt="Squat saut">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Step up – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Monter sur une marche, travail fessiers et cuisses.
+            <img src="images/step_up.jpg" alt="Step up">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pont fessier – 4 x 18
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des fessiers et lombaires.
+            <img src="images/pont_fessier.jpg" alt="Pont fessier">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage – 4 x 45 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement de la sangle abdominale.
+            <img src="images/gainage.jpg" alt="Gainage">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Sprint – 8 x 25m / 6 x 30m
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail explosif et cardio par sprints courts.
+            <img src="images/sprint.jpg" alt="Sprint">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Mardi – Bas explosif</h3>
-      <div class="exercise"><input type="checkbox"> Step-up rapide – 4 x 10 / jambe</div>
-      <div class="exercise"><input type="checkbox"> Squat saut (si toléré) – 3 x 8</div>
-      <div class="exercise"><input type="checkbox"> Gainage + crunch – 3 x 20</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Mardi – Haut du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Pompes – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des pectoraux, triceps et épaules.
+            <img src="images/pompes.jpg" alt="Pompes">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Rowing elastique – 4 x 16
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail du dos avec élastique.
+            <img src="images/rowing_elastique.jpg" alt="Rowing elastique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Curl biceps – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des biceps avec élastique.
+            <img src="images/curl_biceps.jpg" alt="Curl biceps">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Extensions triceps – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail des triceps avec élastique.
+            <img src="images/extensions_triceps.jpg" alt="Extensions triceps">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Course fractionnée – 30/30 x 8
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Course en intervalles de 30 sec effort / 30 sec repos.
+            <img src="images/course_fractionnee.jpg" alt="Course fractionnée">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Mercredi – Mobilité active</h3>
-      <div class="exercise"><input type="checkbox"> Marche rapide ou footing léger – 20 min</div>
-      <div class="exercise"><input type="checkbox"> Étirements actifs – 10 min</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Mercredi – Core dynamique</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Planche – 4 x 50s
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement abdominal profond.
+            <img src="images/planche.jpg" alt="Planche">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Crunch rotation – 4 x 30
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des obliques avec rotation.
+            <img src="images/crunch_rotation.jpg" alt="Crunch rotation">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Superman – 4 x 30s
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement du dos et lombaires.
+            <img src="images/superman.jpg" alt="Superman">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Changement d'appui – 6 x 25s
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail d’équilibre et gainage dynamique.
+            <img src="images/changement_appui.jpg" alt="Changement d'appui">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pas chassé explosif – 6 x 20m
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail de déplacement latéral rapide.
+            <img src="images/pas_chasse_explosif.jpg" alt="Pas chassé explosif">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Jeudi – Core + haut</h3>
-      <div class="exercise"><input type="checkbox"> Pompes inclinées – 4 x 12</div>
-      <div class="exercise"><input type="checkbox"> Crunch + rotation – 3 x 20</div>
-      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Jeudi – Full body</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Burpees modifiés – 4 x 12
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Exercice complet à intensité modérée.
+            <img src="images/burpees.jpg" alt="Burpees modifiés">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Shadow boxing – 4 x 40 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail cardio et coordination avec élastique.
+            <img src="images/shadow_boxing.jpg" alt="Shadow boxing">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Squat sumo isométrique – 4 x 14 / jambe
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des adducteurs en isométrie.
+            <img src="images/squat_sumo_isometrie.jpg" alt="Squat sumo isométrique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Planche – 4 x 50sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement abdominal.
+            <img src="images/planche.jpg" alt="Planche">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage bras tendu – 3 x 55 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Gainage avec bras tendus pour intensifier.
+            <img src="images/gainage_bras_tendu.jpg" alt="Gainage bras tendu">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Vendredi – Fractionné long</h3>
-      <div class="exercise"><input type="checkbox"> Course fractionnée 6 x 1 min/30 sec</div>
-      <div class="exercise"><input type="checkbox"> Squat sumo – 3 x 15</div>
-      <div class="exercise"><input type="checkbox"> Planche dynamique – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Vendredi – Endurance spé</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> 5 x 3 min course à intensité moyenne (85 %)
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail cardio endurance à 85% FC max.
+            <img src="images/course_endurance.jpg" alt="Course endurance">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage oblique – 4 x 45 sec / côté
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des obliques.
+            <img src="images/gainage_oblique.jpg" alt="Gainage oblique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pompes – 4 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement haut du corps.
+            <img src="images/pompes.jpg" alt="Pompes">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Step rapide – 5 x 25 sec / côté
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail rapide de jambes.
+            <img src="images/step_rapide.jpg" alt="Step rapide">
+          </div>
+        </span>
+      </div>
     </div>
   </section>
 
+  <!-- SEMAINE 4 -->
   <section id="sem4">
     <h2>Semaine 4</h2>
+
     <div class="day">
-      <h3>Lundi – Endurance & Core</h3>
-      <div class="exercise"><input type="checkbox"> Course fractionnée 6 x 45/15</div>
-      <div class="exercise"><input type="checkbox"> Crunch rotation – 3 x 20</div>
-      <div class="exercise"><input type="checkbox"> Gainage oblique – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Lundi – Bas du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Squat saut – 5 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Exercice explosif pour les jambes, saut après squat.
+            <img src="images/squat_saut.jpg" alt="Squat saut">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Step up – 5 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Monter sur une marche, travail fessiers et cuisses.
+            <img src="images/step_up.jpg" alt="Step up">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pont fessier – 5 x 20
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des fessiers et lombaires.
+            <img src="images/pont_fessier.jpg" alt="Pont fessier">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage – 5 x 50 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement de la sangle abdominale.
+            <img src="images/gainage.jpg" alt="Gainage">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Sprint – 8 x 30m / 7 x 35m
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail explosif et cardio par sprints courts.
+            <img src="images/sprint.jpg" alt="Sprint">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Mardi – Renfo haut</h3>
-      <div class="exercise"><input type="checkbox"> Pompes – 4 x 10</div>
-      <div class="exercise"><input type="checkbox"> Rowing élastique – 3 x 15</div>
-      <div class="exercise"><input type="checkbox"> Shadow boxing – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Mardi – Haut du corps</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Pompes – 5 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des pectoraux, triceps et épaules.
+            <img src="images/pompes.jpg" alt="Pompes">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Rowing elastique – 5 x 16
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail du dos avec élastique.
+            <img src="images/rowing_elastique.jpg" alt="Rowing elastique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Curl biceps – 5 x 16
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des biceps avec élastique.
+            <img src="images/curl_biceps.jpg" alt="Curl biceps">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Extensions triceps – 5 x 16
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail des triceps avec élastique.
+            <img src="images/extensions_triceps.jpg" alt="Extensions triceps">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Course fractionnée – 40/20 x 8
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Course en intervalles 40 sec effort / 20 sec repos.
+            <img src="images/course_fractionnee.jpg" alt="Course fractionnée">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Mercredi – Actif léger</h3>
-      <div class="exercise"><input type="checkbox"> Marche ou footing 20 min</div>
-      <div class="exercise"><input type="checkbox"> Planche – 3 x 45 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Mercredi – Core dynamique</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Planche – 5 x 55 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement abdominal profond.
+            <img src="images/planche.jpg" alt="Planche">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Crunch rotation – 5 x 35
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des obliques avec rotation.
+            <img src="images/crunch_rotation.jpg" alt="Crunch rotation">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Superman – 5 x 35 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement du dos et lombaires.
+            <img src="images/superman.jpg" alt="Superman">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Changement d'appui – 6 x 30 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail d’équilibre et gainage dynamique.
+            <img src="images/changement_appui.jpg" alt="Changement d'appui">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pas chassé explosif – 6 x 25m
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail de déplacement latéral rapide.
+            <img src="images/pas_chasse_explosif.jpg" alt="Pas chassé explosif">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
       <h3>Jeudi – Full body</h3>
-      <div class="exercise"><input type="checkbox"> Pompes + Squat – 4 x 12</div>
-      <div class="exercise"><input type="checkbox"> Crunch + gainage – 3 x 20</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> Burpees modifiés – 5 x 14
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Exercice complet à intensité modérée.
+            <img src="images/burpees.jpg" alt="Burpees modifiés">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Shadow boxing – 5 x 45 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail cardio et coordination avec élastique.
+            <img src="images/shadow_boxing.jpg" alt="Shadow boxing">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Squat sumo isométrique – 5 x 16 / jambe
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des adducteurs en isométrie.
+            <img src="images/squat_sumo_isometrie.jpg" alt="Squat sumo isométrique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Planche – 5 x 55 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement abdominal.
+            <img src="images/planche.jpg" alt="Planche">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage bras tendu – 4 x 60 sec
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Gainage avec bras tendus pour intensifier.
+            <img src="images/gainage_bras_tendu.jpg" alt="Gainage bras tendu">
+          </div>
+        </span>
+      </div>
     </div>
+
     <div class="day">
-      <h3>Vendredi – Cardio test</h3>
-      <div class="exercise"><input type="checkbox"> Course 7 x 1min/30s</div>
-      <div class="exercise"><input type="checkbox"> Squat sumo – 3 x 15</div>
-      <div class="exercise"><input type="checkbox"> Planche dynamique – 3 x 30 sec</div>
-      <p class="routine">+ Routine genou & periostite</p>
+      <h3>Vendredi – Endurance spé</h3>
+      <p class="routine">Routine genou & periostite</p>
+      <div class="exercise">
+        <input type="checkbox"> 6 x 3 min course à intensité moyenne (85 %)
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail cardio endurance à 85% FC max.
+            <img src="images/course_endurance.jpg" alt="Course endurance">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Gainage oblique – 5 x 50 sec / côté
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement des obliques.
+            <img src="images/gainage_oblique.jpg" alt="Gainage oblique">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Pompes – 5 x 16
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Renforcement haut du corps.
+            <img src="images/pompes.jpg" alt="Pompes">
+          </div>
+        </span>
+      </div>
+      <div class="exercise">
+        <input type="checkbox"> Step rapide – 5 x 30 sec / côté
+        <span class="tooltip-trigger">?
+          <div class="tooltip-content">
+            Travail rapide de jambes.
+            <img src="images/step_rapide.jpg" alt="Step rapide">
+          </div>
+        </span>
+      </div>
     </div>
   </section>
+
 
   <section id="routines">
     <h2>Routines genou & périostite (quotidien)</h2>
