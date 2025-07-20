@@ -118,6 +118,7 @@
       <div class="exercise"><input type="checkbox"> Gainage – 3 x 30 sec</div>
       <div class="exercise"><input type="checkbox"> Sprint – 6 x 20m / 4 x 30m</div>
     </div>
+    <button onclick="toggleChrono()" style="padding: 0.5rem 1rem; background: #2563eb; color: white; border: none; border-radius: 0.5rem;">Chrono</button>
     <div class="day">
       <h3>Mardi – Haut du corps</h3>
       <p class="routine">Routine genou & periostite</p>
@@ -893,6 +894,14 @@
     </div>
   </section>
 
+  <div id="chronoPanel" style="display:none; margin-top:2rem; padding:1rem; background:#fff; border-radius:1rem; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+    <h2>Chronomètre</h2>
+    <div style="font-size:2rem; margin-bottom:1rem;" id="chronoDisplay">00:00</div>
+    <button onclick="startChrono()">Démarrer</button>
+    <button onclick="stopChrono()">Pause</button>
+    <button onclick="resetChrono()">Réinitialiser</button>
+  </div>
+
 
   <section id="routines">
     <h2>Routines genou & périostite (quotidien)</h2>
@@ -922,5 +931,42 @@
       <li><strong>Pompes pliométriques :</strong> pompes avec mini saut mains ou rapides</li>
     </ul>
   </section>
+
+
+  <script>
+    let chronoInterval;
+    let seconds = 0;
+
+    function toggleChrono() {
+      const panel = document.getElementById('chronoPanel');
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function updateChronoDisplay() {
+      const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const sec = String(seconds % 60).padStart(2, '0');
+      document.getElementById('chronoDisplay').textContent = `${min}:${sec}`;
+    }
+
+    function startChrono() {
+      if (!chronoInterval) {
+        chronoInterval = setInterval(() => {
+          seconds++;
+          updateChronoDisplay();
+        }, 1000);
+      }
+    }
+
+    function stopChrono() {
+      clearInterval(chronoInterval);
+      chronoInterval = null;
+    }
+
+    function resetChrono() {
+      stopChrono();
+      seconds = 0;
+      updateChronoDisplay();
+    }
+  </script>
 </body>
 </html>
