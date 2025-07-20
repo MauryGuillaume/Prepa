@@ -1,11 +1,11 @@
-const CACHE_NAME = 'handball-cache-v6'; // 🔁 Mets à jour ce nom à chaque nouvelle version
+const CACHE_NAME = 'handball-cache-v7'; // 🔁 Mets à jour ce nom à chaque nouvelle version
 const urlsToCache = [
   './',
   './index.html',
   './manifest.json',
   './sw.js',
-  //'./icon-192.png',
-  //'./icon-512.png'
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 // INSTALLATION — mise en cache
