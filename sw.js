@@ -1,4 +1,4 @@
-const CACHE_NAME = 'handball-cache-v3'; // 🔁 Mets à jour ce nom à chaque nouvelle version
+const CACHE_NAME = 'handball-cache-v4'; // 🔁 Mets à jour ce nom à chaque nouvelle version
 const urlsToCache = [
   './',
   './index.html',
